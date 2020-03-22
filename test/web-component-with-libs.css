@@ -1,0 +1,1432 @@
+/* DayPicker styles */
+
+.DayPicker {
+  display: inline-block;
+  font-size: 1rem;
+}
+
+.DayPicker-wrapper {
+  position: relative;
+
+  flex-direction: row;
+  padding-bottom: 1em;
+
+  -webkit-user-select: none;
+
+     -moz-user-select: none;
+
+      -ms-user-select: none;
+
+          user-select: none;
+}
+
+.DayPicker-Months {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.DayPicker-Month {
+  display: table;
+  margin: 0 1em;
+  margin-top: 1em;
+  border-spacing: 0;
+  border-collapse: collapse;
+
+  -webkit-user-select: none;
+
+     -moz-user-select: none;
+
+      -ms-user-select: none;
+
+          user-select: none;
+}
+
+.DayPicker-NavBar {
+}
+
+.DayPicker-NavButton {
+  position: absolute;
+  top: 1em;
+  right: 1.5em;
+  left: auto;
+
+  display: inline-block;
+  margin-top: 2px;
+  width: 1.25em;
+  height: 1.25em;
+  background-position: center;
+  background-size: 50%;
+  background-repeat: no-repeat;
+  color: #8B9898;
+  cursor: pointer;
+}
+
+.DayPicker-NavButton:hover {
+  opacity: 0.8;
+}
+
+.DayPicker-NavButton--prev {
+  margin-right: 1.5em;
+  background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAwCAYAAAB5R9gVAAAABGdBTUEAALGPC/xhBQAAAVVJREFUWAnN2G0KgjAYwPHpGfRkaZeqvgQaK+hY3SUHrk1YzNLay/OiEFp92I+/Mp2F2Mh2lLISWnflFjzH263RQjzMZ19wgs73ez0o1WmtW+dgA01VxrE3p6l2GLsnBy1VYQOtVSEH/atCCgqpQgKKqYIOiq2CBkqtggLKqQIKgqgCBjpJ2Y5CdJ+zrT9A7HHSTA1dxUdHgzCqJIEwq0SDsKsEg6iqBIEoq/wEcVRZBXFV+QJxV5mBtlDFB5VjYTaGZ2sf4R9PM7U9ZU+lLuaetPP/5Die3ToO1+u+MKtHs06qODB2zBnI/jBd4MPQm1VkY79Tb18gB+C62FdBFsZR6yeIo1YQiLJWMIiqVjQIu1YSCLNWFgijVjYIuhYYCKoWKAiiFgoopxYaKLUWOii2FgkophYp6F3r42W5A9s9OcgNvva8xQaysKXlFytoqdYmQH6tF3toSUo0INq9AAAAAElFTkSuQmCC');
+}
+
+.DayPicker-NavButton--next {
+  background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAwCAYAAAB5R9gVAAAABGdBTUEAALGPC/xhBQAAAXRJREFUWAnN119ugjAcwPHWzJ1gnmxzB/BBE0n24m4xfNkTaOL7wOtsl3AXMMb+Vjaa1BG00N8fSEibPpAP3xAKKs2yjzTPH9RAjhEo9WzPr/Vm8zgE0+gXATAxxuxtqeJ9t5tIwv5AtQAApsfT6TPdbp+kUBcgVwvO51KqVhMkXKsVJFXrOkigVhCIs1Y4iKlWZxB1rX4gwlpRIIpa8SDkWmggrFq4IIRaJKCYWnSgnrXIQV1r8YD+1Vrn+bReagysIFfLABRt31v8oBu1xEBttfRbltmfjgEcWh9snUS2kNdBK6WN1vrOWxObWsz+fjxevsxmB1GQDfINWiev83nhaoiB/CoOU438oPrhXS0WpQ9xc1ZQWxWHqUYe0I0qrKCQKjygDlXIQV2r0IF6ViEBxVTBBSFUQQNhVYkHIVeJAtkNsbQ7c1LtzP6FsObhb2rCKv7NBIGoq4SDmKoEgTirXAcJVGkFSVVpgoSrXICGUMUH/QBZNSUy5XWUhwAAAABJRU5ErkJggg==');
+}
+
+.DayPicker-NavButton--interactionDisabled {
+  display: none;
+}
+
+.DayPicker-Caption {
+  display: table-caption;
+  margin-bottom: 0.5em;
+  padding: 0 0.5em;
+  text-align: left;
+}
+
+.DayPicker-Caption > div {
+  font-weight: 500;
+  font-size: 1.15em;
+}
+
+.DayPicker-Weekdays {
+  display: table-header-group;
+  margin-top: 1em;
+}
+
+.DayPicker-WeekdaysRow {
+  display: table-row;
+}
+
+.DayPicker-Weekday {
+  display: table-cell;
+  padding: 0.5em;
+  color: #8B9898;
+  text-align: center;
+  font-size: 0.875em;
+}
+
+.DayPicker-Weekday abbr[title] {
+  border-bottom: none;
+  text-decoration: none;
+}
+
+.DayPicker-Body {
+  display: table-row-group;
+}
+
+.DayPicker-Week {
+  display: table-row;
+}
+
+.DayPicker-Day {
+  display: table-cell;
+  padding: 0.5em;
+  border-radius: 50%;
+  vertical-align: middle;
+  text-align: center;
+  cursor: pointer;
+}
+
+.DayPicker-WeekNumber {
+  display: table-cell;
+  padding: 0.5em;
+  min-width: 1em;
+  border-right: 1px solid #EAECEC;
+  color: #8B9898;
+  vertical-align: middle;
+  text-align: right;
+  font-size: 0.75em;
+  cursor: pointer;
+}
+
+.DayPicker--interactionDisabled .DayPicker-Day {
+  cursor: default;
+}
+
+.DayPicker-Footer {
+  padding-top: 0.5em;
+}
+
+.DayPicker-TodayButton {
+  border: none;
+  background-color: transparent;
+  background-image: none;
+  box-shadow: none;
+  color: #4A90E2;
+  font-size: 0.875em;
+  cursor: pointer;
+}
+
+/* Default modifiers */
+
+.DayPicker-Day--today {
+  color: #D0021B;
+  font-weight: 700;
+}
+
+.DayPicker-Day--outside {
+  color: #8B9898;
+  cursor: default;
+}
+
+.DayPicker-Day--disabled {
+  color: #DCE0E0;
+  cursor: default;
+  /* background-color: #eff1f1; */
+}
+
+/* Example modifiers */
+
+.DayPicker-Day--sunday {
+  background-color: #F7F8F8;
+}
+
+.DayPicker-Day--sunday:not(.DayPicker-Day--today) {
+  color: #DCE0E0;
+}
+
+.DayPicker-Day--selected:not(.DayPicker-Day--disabled):not(.DayPicker-Day--outside) {
+  position: relative;
+
+  background-color: #4A90E2;
+  color: #F0F8FF;
+}
+
+.DayPicker-Day--selected:not(.DayPicker-Day--disabled):not(.DayPicker-Day--outside):hover {
+  background-color: #51A0FA;
+}
+
+.DayPicker:not(.DayPicker--interactionDisabled)
+  .DayPicker-Day:not(.DayPicker-Day--disabled):not(.DayPicker-Day--selected):not(.DayPicker-Day--outside):hover {
+  background-color: #F0F8FF;
+}
+
+/* DayPickerInput */
+
+.DayPickerInput {
+  display: inline-block;
+}
+
+.DayPickerInput-OverlayWrapper {
+  position: relative;
+}
+
+.DayPickerInput-Overlay {
+  position: absolute;
+  left: 0;
+  z-index: 1;
+
+  background: white;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+}
+
+html {
+  box-sizing: border-box; }
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit; }
+
+.sabre-shs-widgets-search-hotel-availability {
+  display: flex; }
+  @media only screen and (min-width: 320px) and (max-width: 544px) {
+    .sabre-shs-widgets-search-hotel-availability {
+      flex-direction: column; } }
+  @media only screen and (min-width: 767px) and (max-width: 1024px) {
+    .sabre-shs-widgets-search-hotel-availability .left-container {
+      display: flex;
+      justify-content: center; } }
+  .sabre-shs-widgets-search-hotel-availability .left-container_form-wrapper {
+    background-color: #eee4c6;
+    background: url("https://historichotels.sabredemos.com/templates/images/bg-booking-console.jpg");
+    background-size: cover;
+    border: 1px solid rgba(175, 152, 98, 0.8);
+    width: 90%;
+    padding: 1rem;
+    margin: 1rem; }
+    @media only screen and (min-width: 320px) and (max-width: 544px) {
+      .sabre-shs-widgets-search-hotel-availability .left-container_form-wrapper {
+        width: 25rem;
+        margin: 1rem 0; } }
+    @media only screen and (min-width: 1023px) and (max-width: 1367px) {
+      .sabre-shs-widgets-search-hotel-availability .left-container_form-wrapper {
+        width: 95%;
+        margin: auto; } }
+    @media only screen and (min-width: 767px) and (max-width: 1024px) {
+      .sabre-shs-widgets-search-hotel-availability .left-container_form-wrapper {
+        width: 93%;
+        margin: auto;
+        margin-top: 1rem; } }
+    .sabre-shs-widgets-search-hotel-availability .left-container_form-wrapper_list-wrapper {
+      margin: 1.2rem 0; }
+      .sabre-shs-widgets-search-hotel-availability .left-container_form-wrapper_list-wrapper_input, .sabre-shs-widgets-search-hotel-availability .left-container_form-wrapper_date-picker {
+        background: #fff url(https://historichotels.sabredemos.com/templates/images/icons/icon-search-blue.svg) no-repeat 7px 14px;
+        width: 100%;
+        padding-left: 2.3rem;
+        height: 50px;
+        border: 1px solid #cdc2a4;
+        border-radius: 3px;
+        box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+        font-family: serif;
+        font-size: 1.2rem;
+        text-transform: capitalize; }
+      .sabre-shs-widgets-search-hotel-availability .left-container_form-wrapper_list-wrapper_list {
+        background-color: ghostwhite;
+        width: 28rem;
+        margin-top: 0.4rem;
+        top: 93px;
+        overflow-y: scroll;
+        list-style: none;
+        font-size: 1.2rem;
+        font-weight: bold;
+        position: absolute;
+        padding: 1rem;
+        z-index: 0001;
+        border: 1px solid #82caff;
+        border-radius: 3px;
+        box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+        text-transform: capitalize; }
+        @media only screen and (min-width: 320px) and (max-width: 544px) {
+          .sabre-shs-widgets-search-hotel-availability .left-container_form-wrapper_list-wrapper_list {
+            width: 23rem; } }
+        .sabre-shs-widgets-search-hotel-availability .left-container_form-wrapper_list-wrapper_list_item {
+          display: block;
+          margin-bottom: 0.6rem;
+          background: none;
+          color: inherit;
+          border: none;
+          padding: 0;
+          font: inherit;
+          cursor: pointer;
+          outline: inherit; }
+          .sabre-shs-widgets-search-hotel-availability .left-container_form-wrapper_list-wrapper_list_item:hover {
+            color: purple;
+            transform: scale(1.0003);
+            cursor: pointer; }
+      .sabre-shs-widgets-search-hotel-availability .left-container_form-wrapper_list-wrapper_list.hide {
+        display: none; }
+    .sabre-shs-widgets-search-hotel-availability .left-container_form-wrapper_date-picker {
+      background: #fff url(https://historichotels.sabredemos.com/templates/images/icons/icon-calendar-blue.svg) no-repeat 7px 14px; }
+      .sabre-shs-widgets-search-hotel-availability .left-container_form-wrapper_date-picker_error {
+        color: red;
+        position: absolute;
+        top: 1rem; }
+        .sabre-shs-widgets-search-hotel-availability .left-container_form-wrapper_date-picker_error.hidden-error {
+          display: none; }
+      .sabre-shs-widgets-search-hotel-availability .left-container_form-wrapper_date-picker_from_input {
+        width: 100%;
+        padding: 0.75rem 0;
+        border: none;
+        color: black;
+        padding-left: 0.2rem;
+        margin-top: 0.1rem;
+        font-family: serif;
+        font-size: 1.2rem; }
+        @media only screen and (min-width: 320px) and (max-width: 544px) {
+          .sabre-shs-widgets-search-hotel-availability .left-container_form-wrapper_date-picker_from_input {
+            width: 9rem; } }
+    .sabre-shs-widgets-search-hotel-availability .left-container_form-wrapper_drop-wrapper_select {
+      background: #fff url(https://historichotels.sabredemos.com/templates/images/icons/icon-guest-blue.svg) no-repeat 7px 12px;
+      width: 100%;
+      padding-left: 2.3rem;
+      border: 1px solid #cdc2a4;
+      border-radius: 3px;
+      box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+      margin-bottom: 1rem;
+      cursor: pointer;
+      font-family: serif;
+      font-size: 1.2rem;
+      height: 48px;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      text-rendering: optimizeLegibility; }
+    .sabre-shs-widgets-search-hotel-availability .left-container_form-wrapper_drop-wrapper.left-container {
+      width: 48.5%;
+      display: inline-block;
+      margin: 1.2rem 0.4rem 0 0; }
+      @media only screen and (min-width: 1023px) and (max-width: 1367px) {
+        .sabre-shs-widgets-search-hotel-availability .left-container_form-wrapper_drop-wrapper.left-container {
+          width: 49%;
+          margin: 1.2rem 0.7rem 0 0; } }
+      @media only screen and (min-width: 320px) and (max-width: 544px) {
+        .sabre-shs-widgets-search-hotel-availability .left-container_form-wrapper_drop-wrapper.left-container {
+          width: 47.5%; } }
+    .sabre-shs-widgets-search-hotel-availability .left-container_form-wrapper_drop-wrapper.right-container {
+      width: 48.5%;
+      margin-left: 0.4rem;
+      display: inline-block; }
+      @media only screen and (min-width: 1023px) and (max-width: 1367px) {
+        .sabre-shs-widgets-search-hotel-availability .left-container_form-wrapper_drop-wrapper.right-container {
+          width: 49%;
+          margin: 1.2rem 0.5rem 0 0; } }
+    .sabre-shs-widgets-search-hotel-availability .left-container_form-wrapper_optional-inputs {
+      padding-top: 0.6rem; }
+      .sabre-shs-widgets-search-hotel-availability .left-container_form-wrapper_optional-inputs__promowrap {
+        display: flex;
+        justify-content: space-around;
+        padding: 15px 0;
+        border-top: 1px solid #bca976;
+        border-bottom: 1px solid #bca976;
+        align-items: center;
+        position: relative; }
+        .sabre-shs-widgets-search-hotel-availability .left-container_form-wrapper_optional-inputs__promowrap_link {
+          text-transform: uppercase; }
+          .sabre-shs-widgets-search-hotel-availability .left-container_form-wrapper_optional-inputs__promowrap_link button {
+            background: none;
+            border: none;
+            padding: 0;
+            outline: inherit;
+            color: #2e778c;
+            font-family: "Oswald", sans-serif;
+            font-size: 0.9rem;
+            font-weight: 600;
+            letter-spacing: 0.9px;
+            line-height: normal;
+            text-transform: uppercase;
+            transition: color ease-in-out 0.3s;
+            cursor: pointer;
+            -webkit-font-smoothing: antialiased; }
+          .sabre-shs-widgets-search-hotel-availability .left-container_form-wrapper_optional-inputs__promowrap_link button:hover {
+            color: #094351; }
+          .sabre-shs-widgets-search-hotel-availability .left-container_form-wrapper_optional-inputs__promowrap_link_promo-flyout {
+            display: flex;
+            align-items: center;
+            height: 4rem;
+            position: absolute;
+            top: 58px;
+            left: -4px;
+            background-color: rgba(225, 215, 182, 0.6);
+            justify-content: center;
+            transition: all ease-in-out 0.3s;
+            width: 102%; }
+            .sabre-shs-widgets-search-hotel-availability .left-container_form-wrapper_optional-inputs__promowrap_link_promo-flyout.hidden {
+              display: none; }
+            .sabre-shs-widgets-search-hotel-availability .left-container_form-wrapper_optional-inputs__promowrap_link_promo-flyout :before {
+              content: "";
+              display: block;
+              position: absolute;
+              border: 10px solid transparent;
+              border-bottom-color: rgba(225, 215, 182, 0.6);
+              left: 60px;
+              top: -20px; }
+            .sabre-shs-widgets-search-hotel-availability .left-container_form-wrapper_optional-inputs__promowrap_link_promo-flyout_field:first-child {
+              padding-right: 0.3rem; }
+            .sabre-shs-widgets-search-hotel-availability .left-container_form-wrapper_optional-inputs__promowrap_link_promo-flyout_field:first-child {
+              padding-left: 0.3rem; }
+            .sabre-shs-widgets-search-hotel-availability .left-container_form-wrapper_optional-inputs__promowrap_link_promo-flyout_field input {
+              padding: 0.8rem 0.5rem;
+              border: none; }
+        .sabre-shs-widgets-search-hotel-availability .left-container_form-wrapper_optional-inputs__promowrap_modify-wrap {
+          outline: inherit;
+          color: #2e778c;
+          font-family: "Oswald", sans-serif;
+          font-size: 0.9rem;
+          font-weight: 600;
+          line-height: normal;
+          text-transform: uppercase;
+          transition: color ease-in-out 0.3s;
+          cursor: pointer;
+          -webkit-font-smoothing: antialiased; }
+          .sabre-shs-widgets-search-hotel-availability .left-container_form-wrapper_optional-inputs__promowrap_modify-wrap a:visited {
+            color: #2e778c; }
+          .sabre-shs-widgets-search-hotel-availability .left-container_form-wrapper_optional-inputs__promowrap_modify-wrap a:hover {
+            color: #094351; }
+          .sabre-shs-widgets-search-hotel-availability .left-container_form-wrapper_optional-inputs__promowrap_modify-wrap a:active {
+            color: #2e778c; }
+      .sabre-shs-widgets-search-hotel-availability .left-container_form-wrapper_optional-inputs__contactus {
+        display: flex;
+        align-items: center;
+        padding: 0 0.1rem;
+        text-align: center;
+        margin-top: 2px;
+        border: 1px solid rgba(175, 152, 98, 0.8);
+        font-size: 0.8125rem;
+        color: #473817;
+        line-height: 0.875rem;
+        background: #fbfaf5;
+        background: linear-gradient(to bottom, #fbfaf5 0%, #fcfbf6 3%, #fcf9f2 3%, #fcfbf6 4%, #faf9f4 6%, #fdf8f2 9%, #f9faf2 10%, #fcf9f0 13%, #fcf7f1 15%, #f9f8f3 16%, #fdf8f2 17%, #f9f9ef 18%, #fcf9f0 21%, #faf7ee 28%, #f9f7eb 29%, #faf7ee 30%, #f8f6ea 31%, #f9f6ed 31%, #f9f6ed 35%, #fbf9ec 36%, #f8f6ea 38%, #f9f5e9 42%, #fcf6ea 42%, #f8f6e9 43%, #f7f5e6 48%, #faf4e6 49%, #f6f7e7 52%, #f8f5e6 53%, #f6f3e2 62%, #f8f5e2 64%, #f5f2df 64%, #f7f4e1 65%, #f7f4e1 100%); }
+        .sabre-shs-widgets-search-hotel-availability .left-container_form-wrapper_optional-inputs__contactus_phone {
+          flex: 1; }
+        .sabre-shs-widgets-search-hotel-availability .left-container_form-wrapper_optional-inputs__contactus_email {
+          flex: 1; }
+      .sabre-shs-widgets-search-hotel-availability .left-container_form-wrapper_optional-inputs__additional {
+        padding: 1rem 0.5rem 0; }
+        .sabre-shs-widgets-search-hotel-availability .left-container_form-wrapper_optional-inputs__additional_desc {
+          font-size: 0.95rem;
+          color: #473817; }
+        .sabre-shs-widgets-search-hotel-availability .left-container_form-wrapper_optional-inputs__additional_link {
+          padding-left: 0.3rem;
+          font-size: 1rem; }
+    .sabre-shs-widgets-search-hotel-availability .left-container_form-wrapper_search-btn {
+      background-color: #2d788f;
+      width: 100%;
+      text-align: center;
+      font-family: "Oswald", sans-serif;
+      color: #fff;
+      text-transform: uppercase;
+      padding: 0;
+      margin-top: 2rem;
+      border-radius: 3px;
+      height: 50px;
+      line-height: 50px;
+      box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.5);
+      font-size: 1.25rem;
+      letter-spacing: 3.33px;
+      border: none;
+      cursor: pointer;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      text-rendering: optimizeLegibility; }
+    .sabre-shs-widgets-search-hotel-availability .left-container_form-wrapper_search-btn:hover {
+      background: #094351; }
+  .sabre-shs-widgets-search-hotel-availability .right-container_property-cards {
+    margin: 2rem; }
+    @media only screen and (min-width: 320px) and (max-width: 544px) {
+      .sabre-shs-widgets-search-hotel-availability .right-container_property-cards {
+        margin: 0; } }
+    .sabre-shs-widgets-search-hotel-availability .right-container_property-cards__card {
+      width: 100%;
+      display: flex;
+      background: #ffffff;
+      box-shadow: 0 0 8px 0 rgba(68, 68, 68, 0.25);
+      border-radius: 0 0 7px 7px;
+      padding: 1.25rem 1.875rem 1.5625rem 1.25rem;
+      margin: 0 auto 1.875rem auto; }
+      @media only screen and (min-width: 320px) and (max-width: 544px) {
+        .sabre-shs-widgets-search-hotel-availability .right-container_property-cards__card {
+          flex-direction: column;
+          padding: 1rem 1rem; } }
+      @media only screen and (min-width: 767px) and (max-width: 1024px) {
+        .sabre-shs-widgets-search-hotel-availability .right-container_property-cards__card_image-wrapper {
+          display: flex;
+          align-items: center; } }
+      .sabre-shs-widgets-search-hotel-availability .right-container_property-cards__card_image-wrapper img {
+        width: 400px;
+        height: 250px; }
+        @media only screen and (min-width: 320px) and (max-width: 544px) {
+          .sabre-shs-widgets-search-hotel-availability .right-container_property-cards__card_image-wrapper img {
+            width: 320px;
+            height: 170px; } }
+      .sabre-shs-widgets-search-hotel-availability .right-container_property-cards__card_card-wrapper {
+        margin-left: 2.5rem; }
+        @media only screen and (min-width: 320px) and (max-width: 544px) {
+          .sabre-shs-widgets-search-hotel-availability .right-container_property-cards__card_card-wrapper {
+            margin-left: 0rem; } }
+        .sabre-shs-widgets-search-hotel-availability .right-container_property-cards__card_card-wrapper_title {
+          font-weight: bold;
+          margin: 0.2rem; }
+        .sabre-shs-widgets-search-hotel-availability .right-container_property-cards__card_card-wrapper_address {
+          margin: 0.2rem; }
+          .sabre-shs-widgets-search-hotel-availability .right-container_property-cards__card_card-wrapper_address span {
+            color: #2e778c;
+            font-size: 1rem;
+            line-height: 1.375rem;
+            font-family: "AdobeCaslonW01-SmBdIt", serif;
+            font-weight: 400; }
+        .sabre-shs-widgets-search-hotel-availability .right-container_property-cards__card_card-wrapper_desc {
+          text-align: justify; }
+        @media only screen and (min-width: 320px) and (max-width: 544px) {
+          .sabre-shs-widgets-search-hotel-availability .right-container_property-cards__card_card-wrapper_button-wrapper {
+            width: 100%; } }
+        .sabre-shs-widgets-search-hotel-availability .right-container_property-cards__card_card-wrapper_button-wrapper_btn, .sabre-shs-widgets-search-hotel-availability .right-container_property-cards__card_card-wrapper_button-wrapper_btn--book {
+          background: #8c6d2c;
+          box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.3);
+          color: #fff;
+          font-family: "Oswald", sans-serif;
+          line-height: 50px;
+          text-transform: uppercase;
+          width: 15rem;
+          padding: 1rem;
+          transition: background-color 0.3s;
+          padding-top: 0;
+          padding-bottom: 0;
+          display: inline-block;
+          margin-right: 0.6875rem;
+          font-size: 1rem;
+          letter-spacing: 2.4px;
+          cursor: pointer;
+          text-align: center; }
+          @media only screen and (min-width: 320px) and (max-width: 544px) {
+            .sabre-shs-widgets-search-hotel-availability .right-container_property-cards__card_card-wrapper_button-wrapper_btn, .sabre-shs-widgets-search-hotel-availability .right-container_property-cards__card_card-wrapper_button-wrapper_btn--book {
+              width: 100%; } }
+          @media only screen and (min-width: 767px) and (max-width: 1024px) {
+            .sabre-shs-widgets-search-hotel-availability .right-container_property-cards__card_card-wrapper_button-wrapper_btn, .sabre-shs-widgets-search-hotel-availability .right-container_property-cards__card_card-wrapper_button-wrapper_btn--book {
+              margin-bottom: 1rem; } }
+        .sabre-shs-widgets-search-hotel-availability .right-container_property-cards__card_card-wrapper_button-wrapper_btn:hover, .sabre-shs-widgets-search-hotel-availability .right-container_property-cards__card_card-wrapper_button-wrapper_btn--book:hover {
+          background: #694900;
+          color: white; }
+        .sabre-shs-widgets-search-hotel-availability .right-container_property-cards__card_card-wrapper_button-wrapper_btn--book {
+          background: #2e778c; }
+          @media only screen and (min-width: 320px) and (max-width: 544px) {
+            .sabre-shs-widgets-search-hotel-availability .right-container_property-cards__card_card-wrapper_button-wrapper_btn--book {
+              margin-top: 1rem; } }
+        .sabre-shs-widgets-search-hotel-availability .right-container_property-cards__card_card-wrapper_button-wrapper_btn--book:hover {
+          background: #094351;
+          color: white; }
+  .sabre-shs-widgets-search-hotel-availability .InputFromTo .DayPickerInput-Overlay {
+    width: 300px; }
+  .sabre-shs-widgets-search-hotel-availability .InputFromTo-to .DayPickerInput-Overlay {
+    margin-left: -120px; }
+  .sabre-shs-widgets-search-hotel-availability .InputFromTo .DayPicker-Day--selected:not(.DayPicker-Day--start):not(.DayPicker-Day--end):not(.DayPicker-Day--outside) {
+    background-color: #f0f8ff !important;
+    color: #4a90e2; }
+  .sabre-shs-widgets-search-hotel-availability .InputFromTo .DayPicker-Day {
+    border-radius: 0 !important; }
+  .sabre-shs-widgets-search-hotel-availability .InputFromTo .DayPickerInput {
+    width: 50%; }
+  .sabre-shs-widgets-search-hotel-availability .DayPicker {
+    display: inline-block;
+    font-size: 1.2rem;
+    color: black; }
+  .sabre-shs-widgets-search-hotel-availability .InputFromTo .DayPicker-Day--selected:not(.DayPicker-Day--start):not(.DayPicker-Day--end):not(.DayPicker-Day--outside) {
+    background-color: #f0f8ff !important;
+    color: #4a90e2; }
+  .sabre-shs-widgets-search-hotel-availability .InputFromTo .DayPicker-Day {
+    border-radius: 0 !important; }
+  .sabre-shs-widgets-search-hotel-availability .InputFromTo .DayPickerInput {
+    width: 50%; }
+  .sabre-shs-widgets-search-hotel-availability .InputFromTo .DayPicker-Day--start {
+    border-top-left-radius: 50% !important;
+    border-bottom-left-radius: 50% !important; }
+  .sabre-shs-widgets-search-hotel-availability .InputFromTo .DayPicker-Day--end {
+    border-top-right-radius: 50% !important;
+    border-bottom-right-radius: 50% !important; }
+
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem; }
+
+@media (min-width: 544px) {
+  .container {
+    max-width: 768px; } }
+
+@media (min-width: 796px) {
+  .container {
+    max-width: 1008px; } }
+
+@media (min-width: 1048px) {
+  .container {
+    max-width: 1368px; } }
+
+@media (min-width: 1800px) {
+  .container {
+    max-width: 1920px; } }
+
+.container-fluid {
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem; }
+
+.row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-left: -1rem;
+  margin-right: -1rem; }
+
+.col-xs-1, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9, .col-xs-10, .col-xs-11, .col-xs-12, .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12, .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12, .col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12, .col-xl-1, .col-xl-2, .col-xl-3, .col-xl-4, .col-xl-5, .col-xl-6, .col-xl-7, .col-xl-8, .col-xl-9, .col-xl-10, .col-xl-11, .col-xl-12 {
+  position: relative;
+  min-height: 1px;
+  padding-right: 1rem;
+  padding-left: 1rem;
+  width: 100%; }
+
+.col-xs {
+  position: relative;
+  -ms-flex-preferred-size: 0;
+  flex-basis: 0;
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  max-width: 100%;
+  min-height: 1px;
+  padding-right: 1rem;
+  padding-left: 1rem; }
+
+.col-xs-1 {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 8.33333333%;
+  flex: 0 0 8.33333333%;
+  max-width: 8.33333333%; }
+
+.col-xs-2 {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 16.66666667%;
+  flex: 0 0 16.66666667%;
+  max-width: 16.66666667%; }
+
+.col-xs-3 {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 25%;
+  flex: 0 0 25%;
+  max-width: 25%; }
+
+.col-xs-4 {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 33.33333333%;
+  flex: 0 0 33.33333333%;
+  max-width: 33.33333333%; }
+
+.col-xs-5 {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 41.66666667%;
+  flex: 0 0 41.66666667%;
+  max-width: 41.66666667%; }
+
+.col-xs-6 {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 50%;
+  flex: 0 0 50%;
+  max-width: 50%; }
+
+.col-xs-7 {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 58.33333333%;
+  flex: 0 0 58.33333333%;
+  max-width: 58.33333333%; }
+
+.col-xs-8 {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 66.66666667%;
+  flex: 0 0 66.66666667%;
+  max-width: 66.66666667%; }
+
+.col-xs-9 {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 75%;
+  flex: 0 0 75%;
+  max-width: 75%; }
+
+.col-xs-10 {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 83.33333333%;
+  flex: 0 0 83.33333333%;
+  max-width: 83.33333333%; }
+
+.col-xs-11 {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 91.66666667%;
+  flex: 0 0 91.66666667%;
+  max-width: 91.66666667%; }
+
+.col-xs-12 {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 100%;
+  flex: 0 0 100%;
+  max-width: 100%; }
+
+.pull-xs-0 {
+  right: auto; }
+
+.pull-xs-1 {
+  right: 8.33333333%; }
+
+.pull-xs-2 {
+  right: 16.66666667%; }
+
+.pull-xs-3 {
+  right: 25%; }
+
+.pull-xs-4 {
+  right: 33.33333333%; }
+
+.pull-xs-5 {
+  right: 41.66666667%; }
+
+.pull-xs-6 {
+  right: 50%; }
+
+.pull-xs-7 {
+  right: 58.33333333%; }
+
+.pull-xs-8 {
+  right: 66.66666667%; }
+
+.pull-xs-9 {
+  right: 75%; }
+
+.pull-xs-10 {
+  right: 83.33333333%; }
+
+.pull-xs-11 {
+  right: 91.66666667%; }
+
+.pull-xs-12 {
+  right: 100%; }
+
+.push-xs-0 {
+  left: auto; }
+
+.push-xs-1 {
+  left: 8.33333333%; }
+
+.push-xs-2 {
+  left: 16.66666667%; }
+
+.push-xs-3 {
+  left: 25%; }
+
+.push-xs-4 {
+  left: 33.33333333%; }
+
+.push-xs-5 {
+  left: 41.66666667%; }
+
+.push-xs-6 {
+  left: 50%; }
+
+.push-xs-7 {
+  left: 58.33333333%; }
+
+.push-xs-8 {
+  left: 66.66666667%; }
+
+.push-xs-9 {
+  left: 75%; }
+
+.push-xs-10 {
+  left: 83.33333333%; }
+
+.push-xs-11 {
+  left: 91.66666667%; }
+
+.push-xs-12 {
+  left: 100%; }
+
+.offset-xs-1 {
+  margin-left: 8.33333333%; }
+
+.offset-xs-2 {
+  margin-left: 16.66666667%; }
+
+.offset-xs-3 {
+  margin-left: 25%; }
+
+.offset-xs-4 {
+  margin-left: 33.33333333%; }
+
+.offset-xs-5 {
+  margin-left: 41.66666667%; }
+
+.offset-xs-6 {
+  margin-left: 50%; }
+
+.offset-xs-7 {
+  margin-left: 58.33333333%; }
+
+.offset-xs-8 {
+  margin-left: 66.66666667%; }
+
+.offset-xs-9 {
+  margin-left: 75%; }
+
+.offset-xs-10 {
+  margin-left: 83.33333333%; }
+
+.offset-xs-11 {
+  margin-left: 91.66666667%; }
+
+@media (min-width: 544px) {
+  .col-sm {
+    position: relative;
+    -ms-flex-preferred-size: 0;
+    flex-basis: 0;
+    -webkit-box-flex: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    max-width: 100%;
+    min-height: 1px;
+    padding-right: 1rem;
+    padding-left: 1rem; }
+  .col-sm-1 {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 8.33333333%;
+    flex: 0 0 8.33333333%;
+    max-width: 8.33333333%; }
+  .col-sm-2 {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 16.66666667%;
+    flex: 0 0 16.66666667%;
+    max-width: 16.66666667%; }
+  .col-sm-3 {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 25%;
+    flex: 0 0 25%;
+    max-width: 25%; }
+  .col-sm-4 {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 33.33333333%;
+    flex: 0 0 33.33333333%;
+    max-width: 33.33333333%; }
+  .col-sm-5 {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 41.66666667%;
+    flex: 0 0 41.66666667%;
+    max-width: 41.66666667%; }
+  .col-sm-6 {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 50%;
+    flex: 0 0 50%;
+    max-width: 50%; }
+  .col-sm-7 {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 58.33333333%;
+    flex: 0 0 58.33333333%;
+    max-width: 58.33333333%; }
+  .col-sm-8 {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 66.66666667%;
+    flex: 0 0 66.66666667%;
+    max-width: 66.66666667%; }
+  .col-sm-9 {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 75%;
+    flex: 0 0 75%;
+    max-width: 75%; }
+  .col-sm-10 {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 83.33333333%;
+    flex: 0 0 83.33333333%;
+    max-width: 83.33333333%; }
+  .col-sm-11 {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 91.66666667%;
+    flex: 0 0 91.66666667%;
+    max-width: 91.66666667%; }
+  .col-sm-12 {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+    max-width: 100%; }
+  .pull-sm-0 {
+    right: auto; }
+  .pull-sm-1 {
+    right: 8.33333333%; }
+  .pull-sm-2 {
+    right: 16.66666667%; }
+  .pull-sm-3 {
+    right: 25%; }
+  .pull-sm-4 {
+    right: 33.33333333%; }
+  .pull-sm-5 {
+    right: 41.66666667%; }
+  .pull-sm-6 {
+    right: 50%; }
+  .pull-sm-7 {
+    right: 58.33333333%; }
+  .pull-sm-8 {
+    right: 66.66666667%; }
+  .pull-sm-9 {
+    right: 75%; }
+  .pull-sm-10 {
+    right: 83.33333333%; }
+  .pull-sm-11 {
+    right: 91.66666667%; }
+  .pull-sm-12 {
+    right: 100%; }
+  .push-sm-0 {
+    left: auto; }
+  .push-sm-1 {
+    left: 8.33333333%; }
+  .push-sm-2 {
+    left: 16.66666667%; }
+  .push-sm-3 {
+    left: 25%; }
+  .push-sm-4 {
+    left: 33.33333333%; }
+  .push-sm-5 {
+    left: 41.66666667%; }
+  .push-sm-6 {
+    left: 50%; }
+  .push-sm-7 {
+    left: 58.33333333%; }
+  .push-sm-8 {
+    left: 66.66666667%; }
+  .push-sm-9 {
+    left: 75%; }
+  .push-sm-10 {
+    left: 83.33333333%; }
+  .push-sm-11 {
+    left: 91.66666667%; }
+  .push-sm-12 {
+    left: 100%; }
+  .offset-sm-0 {
+    margin-left: 0%; }
+  .offset-sm-1 {
+    margin-left: 8.33333333%; }
+  .offset-sm-2 {
+    margin-left: 16.66666667%; }
+  .offset-sm-3 {
+    margin-left: 25%; }
+  .offset-sm-4 {
+    margin-left: 33.33333333%; }
+  .offset-sm-5 {
+    margin-left: 41.66666667%; }
+  .offset-sm-6 {
+    margin-left: 50%; }
+  .offset-sm-7 {
+    margin-left: 58.33333333%; }
+  .offset-sm-8 {
+    margin-left: 66.66666667%; }
+  .offset-sm-9 {
+    margin-left: 75%; }
+  .offset-sm-10 {
+    margin-left: 83.33333333%; }
+  .offset-sm-11 {
+    margin-left: 91.66666667%; } }
+
+@media (min-width: 796px) {
+  .col-md {
+    position: relative;
+    -ms-flex-preferred-size: 0;
+    flex-basis: 0;
+    -webkit-box-flex: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    max-width: 100%;
+    min-height: 1px;
+    padding-right: 1rem;
+    padding-left: 1rem; }
+  .col-md-1 {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 8.33333333%;
+    flex: 0 0 8.33333333%;
+    max-width: 8.33333333%; }
+  .col-md-2 {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 16.66666667%;
+    flex: 0 0 16.66666667%;
+    max-width: 16.66666667%; }
+  .col-md-3 {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 25%;
+    flex: 0 0 25%;
+    max-width: 25%; }
+  .col-md-4 {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 33.33333333%;
+    flex: 0 0 33.33333333%;
+    max-width: 33.33333333%; }
+  .col-md-5 {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 41.66666667%;
+    flex: 0 0 41.66666667%;
+    max-width: 41.66666667%; }
+  .col-md-6 {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 50%;
+    flex: 0 0 50%;
+    max-width: 50%; }
+  .col-md-7 {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 58.33333333%;
+    flex: 0 0 58.33333333%;
+    max-width: 58.33333333%; }
+  .col-md-8 {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 66.66666667%;
+    flex: 0 0 66.66666667%;
+    max-width: 66.66666667%; }
+  .col-md-9 {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 75%;
+    flex: 0 0 75%;
+    max-width: 75%; }
+  .col-md-10 {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 83.33333333%;
+    flex: 0 0 83.33333333%;
+    max-width: 83.33333333%; }
+  .col-md-11 {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 91.66666667%;
+    flex: 0 0 91.66666667%;
+    max-width: 91.66666667%; }
+  .col-md-12 {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+    max-width: 100%; }
+  .pull-md-0 {
+    right: auto; }
+  .pull-md-1 {
+    right: 8.33333333%; }
+  .pull-md-2 {
+    right: 16.66666667%; }
+  .pull-md-3 {
+    right: 25%; }
+  .pull-md-4 {
+    right: 33.33333333%; }
+  .pull-md-5 {
+    right: 41.66666667%; }
+  .pull-md-6 {
+    right: 50%; }
+  .pull-md-7 {
+    right: 58.33333333%; }
+  .pull-md-8 {
+    right: 66.66666667%; }
+  .pull-md-9 {
+    right: 75%; }
+  .pull-md-10 {
+    right: 83.33333333%; }
+  .pull-md-11 {
+    right: 91.66666667%; }
+  .pull-md-12 {
+    right: 100%; }
+  .push-md-0 {
+    left: auto; }
+  .push-md-1 {
+    left: 8.33333333%; }
+  .push-md-2 {
+    left: 16.66666667%; }
+  .push-md-3 {
+    left: 25%; }
+  .push-md-4 {
+    left: 33.33333333%; }
+  .push-md-5 {
+    left: 41.66666667%; }
+  .push-md-6 {
+    left: 50%; }
+  .push-md-7 {
+    left: 58.33333333%; }
+  .push-md-8 {
+    left: 66.66666667%; }
+  .push-md-9 {
+    left: 75%; }
+  .push-md-10 {
+    left: 83.33333333%; }
+  .push-md-11 {
+    left: 91.66666667%; }
+  .push-md-12 {
+    left: 100%; }
+  .offset-md-0 {
+    margin-left: 0%; }
+  .offset-md-1 {
+    margin-left: 8.33333333%; }
+  .offset-md-2 {
+    margin-left: 16.66666667%; }
+  .offset-md-3 {
+    margin-left: 25%; }
+  .offset-md-4 {
+    margin-left: 33.33333333%; }
+  .offset-md-5 {
+    margin-left: 41.66666667%; }
+  .offset-md-6 {
+    margin-left: 50%; }
+  .offset-md-7 {
+    margin-left: 58.33333333%; }
+  .offset-md-8 {
+    margin-left: 66.66666667%; }
+  .offset-md-9 {
+    margin-left: 75%; }
+  .offset-md-10 {
+    margin-left: 83.33333333%; }
+  .offset-md-11 {
+    margin-left: 91.66666667%; } }
+
+@media (min-width: 1048px) {
+  .col-lg {
+    position: relative;
+    -ms-flex-preferred-size: 0;
+    flex-basis: 0;
+    -webkit-box-flex: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    max-width: 100%;
+    min-height: 1px;
+    padding-right: 1rem;
+    padding-left: 1rem; }
+  .col-lg-1 {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 8.33333333%;
+    flex: 0 0 8.33333333%;
+    max-width: 8.33333333%; }
+  .col-lg-2 {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 16.66666667%;
+    flex: 0 0 16.66666667%;
+    max-width: 16.66666667%; }
+  .col-lg-3 {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 25%;
+    flex: 0 0 25%;
+    max-width: 25%; }
+  .col-lg-4 {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 33.33333333%;
+    flex: 0 0 33.33333333%;
+    max-width: 33.33333333%; }
+  .col-lg-5 {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 41.66666667%;
+    flex: 0 0 41.66666667%;
+    max-width: 41.66666667%; }
+  .col-lg-6 {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 50%;
+    flex: 0 0 50%;
+    max-width: 50%; }
+  .col-lg-7 {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 58.33333333%;
+    flex: 0 0 58.33333333%;
+    max-width: 58.33333333%; }
+  .col-lg-8 {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 66.66666667%;
+    flex: 0 0 66.66666667%;
+    max-width: 66.66666667%; }
+  .col-lg-9 {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 75%;
+    flex: 0 0 75%;
+    max-width: 75%; }
+  .col-lg-10 {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 83.33333333%;
+    flex: 0 0 83.33333333%;
+    max-width: 83.33333333%; }
+  .col-lg-11 {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 91.66666667%;
+    flex: 0 0 91.66666667%;
+    max-width: 91.66666667%; }
+  .col-lg-12 {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+    max-width: 100%; }
+  .pull-lg-0 {
+    right: auto; }
+  .pull-lg-1 {
+    right: 8.33333333%; }
+  .pull-lg-2 {
+    right: 16.66666667%; }
+  .pull-lg-3 {
+    right: 25%; }
+  .pull-lg-4 {
+    right: 33.33333333%; }
+  .pull-lg-5 {
+    right: 41.66666667%; }
+  .pull-lg-6 {
+    right: 50%; }
+  .pull-lg-7 {
+    right: 58.33333333%; }
+  .pull-lg-8 {
+    right: 66.66666667%; }
+  .pull-lg-9 {
+    right: 75%; }
+  .pull-lg-10 {
+    right: 83.33333333%; }
+  .pull-lg-11 {
+    right: 91.66666667%; }
+  .pull-lg-12 {
+    right: 100%; }
+  .push-lg-0 {
+    left: auto; }
+  .push-lg-1 {
+    left: 8.33333333%; }
+  .push-lg-2 {
+    left: 16.66666667%; }
+  .push-lg-3 {
+    left: 25%; }
+  .push-lg-4 {
+    left: 33.33333333%; }
+  .push-lg-5 {
+    left: 41.66666667%; }
+  .push-lg-6 {
+    left: 50%; }
+  .push-lg-7 {
+    left: 58.33333333%; }
+  .push-lg-8 {
+    left: 66.66666667%; }
+  .push-lg-9 {
+    left: 75%; }
+  .push-lg-10 {
+    left: 83.33333333%; }
+  .push-lg-11 {
+    left: 91.66666667%; }
+  .push-lg-12 {
+    left: 100%; }
+  .offset-lg-0 {
+    margin-left: 0%; }
+  .offset-lg-1 {
+    margin-left: 8.33333333%; }
+  .offset-lg-2 {
+    margin-left: 16.66666667%; }
+  .offset-lg-3 {
+    margin-left: 25%; }
+  .offset-lg-4 {
+    margin-left: 33.33333333%; }
+  .offset-lg-5 {
+    margin-left: 41.66666667%; }
+  .offset-lg-6 {
+    margin-left: 50%; }
+  .offset-lg-7 {
+    margin-left: 58.33333333%; }
+  .offset-lg-8 {
+    margin-left: 66.66666667%; }
+  .offset-lg-9 {
+    margin-left: 75%; }
+  .offset-lg-10 {
+    margin-left: 83.33333333%; }
+  .offset-lg-11 {
+    margin-left: 91.66666667%; } }
+
+@media (min-width: 1800px) {
+  .col-xl {
+    position: relative;
+    -ms-flex-preferred-size: 0;
+    flex-basis: 0;
+    -webkit-box-flex: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    max-width: 100%;
+    min-height: 1px;
+    padding-right: 1rem;
+    padding-left: 1rem; }
+  .col-xl-1 {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 8.33333333%;
+    flex: 0 0 8.33333333%;
+    max-width: 8.33333333%; }
+  .col-xl-2 {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 16.66666667%;
+    flex: 0 0 16.66666667%;
+    max-width: 16.66666667%; }
+  .col-xl-3 {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 25%;
+    flex: 0 0 25%;
+    max-width: 25%; }
+  .col-xl-4 {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 33.33333333%;
+    flex: 0 0 33.33333333%;
+    max-width: 33.33333333%; }
+  .col-xl-5 {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 41.66666667%;
+    flex: 0 0 41.66666667%;
+    max-width: 41.66666667%; }
+  .col-xl-6 {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 50%;
+    flex: 0 0 50%;
+    max-width: 50%; }
+  .col-xl-7 {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 58.33333333%;
+    flex: 0 0 58.33333333%;
+    max-width: 58.33333333%; }
+  .col-xl-8 {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 66.66666667%;
+    flex: 0 0 66.66666667%;
+    max-width: 66.66666667%; }
+  .col-xl-9 {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 75%;
+    flex: 0 0 75%;
+    max-width: 75%; }
+  .col-xl-10 {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 83.33333333%;
+    flex: 0 0 83.33333333%;
+    max-width: 83.33333333%; }
+  .col-xl-11 {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 91.66666667%;
+    flex: 0 0 91.66666667%;
+    max-width: 91.66666667%; }
+  .col-xl-12 {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+    max-width: 100%; }
+  .pull-xl-0 {
+    right: auto; }
+  .pull-xl-1 {
+    right: 8.33333333%; }
+  .pull-xl-2 {
+    right: 16.66666667%; }
+  .pull-xl-3 {
+    right: 25%; }
+  .pull-xl-4 {
+    right: 33.33333333%; }
+  .pull-xl-5 {
+    right: 41.66666667%; }
+  .pull-xl-6 {
+    right: 50%; }
+  .pull-xl-7 {
+    right: 58.33333333%; }
+  .pull-xl-8 {
+    right: 66.66666667%; }
+  .pull-xl-9 {
+    right: 75%; }
+  .pull-xl-10 {
+    right: 83.33333333%; }
+  .pull-xl-11 {
+    right: 91.66666667%; }
+  .pull-xl-12 {
+    right: 100%; }
+  .push-xl-0 {
+    left: auto; }
+  .push-xl-1 {
+    left: 8.33333333%; }
+  .push-xl-2 {
+    left: 16.66666667%; }
+  .push-xl-3 {
+    left: 25%; }
+  .push-xl-4 {
+    left: 33.33333333%; }
+  .push-xl-5 {
+    left: 41.66666667%; }
+  .push-xl-6 {
+    left: 50%; }
+  .push-xl-7 {
+    left: 58.33333333%; }
+  .push-xl-8 {
+    left: 66.66666667%; }
+  .push-xl-9 {
+    left: 75%; }
+  .push-xl-10 {
+    left: 83.33333333%; }
+  .push-xl-11 {
+    left: 91.66666667%; }
+  .push-xl-12 {
+    left: 100%; }
+  .offset-xl-0 {
+    margin-left: 0%; }
+  .offset-xl-1 {
+    margin-left: 8.33333333%; }
+  .offset-xl-2 {
+    margin-left: 16.66666667%; }
+  .offset-xl-3 {
+    margin-left: 25%; }
+  .offset-xl-4 {
+    margin-left: 33.33333333%; }
+  .offset-xl-5 {
+    margin-left: 41.66666667%; }
+  .offset-xl-6 {
+    margin-left: 50%; }
+  .offset-xl-7 {
+    margin-left: 58.33333333%; }
+  .offset-xl-8 {
+    margin-left: 66.66666667%; }
+  .offset-xl-9 {
+    margin-left: 75%; }
+  .offset-xl-10 {
+    margin-left: 83.33333333%; }
+  .offset-xl-11 {
+    margin-left: 91.66666667%; } }

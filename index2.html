@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="web-component-with-libs.css">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery Slider</title>
+</head>
+
+<body>
+    <div>
+
+        <sabre-shs-widgets-gallery-slider
+            settings='{"dots":false,"infinite":true,"fade":true,"speed":500,"slidesToShow":1,"slidesToScroll":1,"swipeToSlide":true,"arrows":true,"lazyLoad":true,"adaptiveHeight":false,"focusOnSelect":true,"variableWidth":false,"pauseOnFocus":true,"className":"slide-arrow"}'
+            sliderdata='[{"propertyId": "HDOC", "galleryData":[{"galleryCode": "DLX", "items": [{"URL":"https://images.caricos.com/l/land_rover/2015_range_rover_hybrid/images/1920x1080/2015_range_rover_hybrid_9_1920x1080.jpg","title":"Range Rover, Beauty beast","description":"Description for the image","alt":"Range Rover","order":5,"extension":"png","type":"image"},{"description":"The first Blender Open Movie from 2006","source":{"type":"video","sources":[{"src":"bTqVqk7FSmY","provider":"youtube"}]},"subtitle":"By Blender Foundation","title":"Elephant Dream","order":7,"type":"video"}]}]}]'
+            property="HDOC" code="DLX"
+            flags='{"isTitleRequired": true, "isCountRequired": true, "isDescriptionRequired": true}'>
+        </sabre-shs-widgets-gallery-slider>
+        <sabre-shs-widgets-gallery-slider
+            settings='{"dots":false,"infinite":true,"fade":true,"speed":500,"slidesToShow":1,"slidesToScroll":1,"swipeToSlide":true,"arrows":true,"lazyLoad":true,"adaptiveHeight":false,"focusOnSelect":true,"variableWidth":false,"pauseOnFocus":true,"className":"slide-arrow"}'
+            sliderdata='[{"propertyId": "HDOC", "galleryData":[{"galleryCode": "DLX", "items": [{"URL":"https://images.caricos.com/l/land_rover/2015_range_rover_hybrid/images/1920x1080/2015_range_rover_hybrid_9_1920x1080.jpg","title":"Range Rover, Beauty beast","description":"Description for the image","alt":"Range Rover","order":5,"extension":"png","type":"image"},{"description":"The first Blender Open Movie from 2006","source":{"type":"video","sources":[{"src":"bTqVqk7FSmY","provider":"youtube"}]},"subtitle":"By Blender Foundation","title":"Elephant Dream","order":7,"type":"video"}]}]}]'
+            property="HDOC" code="DLX"
+            flags='{"isTitleRequired": true, "isCountRequired": true, "isDescriptionRequired": true, "CTAButton": {"isCTARequired": true, "text": "Learn More"}}'>
+        </sabre-shs-widgets-gallery-slider>
+    </div>
+
+    <script charset="utf-8" src="web-component-with-libs.js"></script>
+</body>
+
+</html>
